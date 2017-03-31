@@ -29,7 +29,7 @@ procedure
     ;
     
 procedurecall
-    : Identifier '(' explist? ')' ('with' varlist)?
+    : ('run')? Identifier '(' explist? ')' ('with' varlist)?
     ;
     
 objlist
