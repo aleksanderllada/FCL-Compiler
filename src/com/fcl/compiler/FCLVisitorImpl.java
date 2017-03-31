@@ -80,12 +80,12 @@ class FCLVisitorImpl implements FCLVisitor<Integer> {
 	private static final Logger Log = Logger.getLogger( FCLVisitorImpl.class.getName() );
 	
 	public enum ReturnCode {
-		BLOCK_RETURNED(1, "The block finished with a return statement. For internal use only."),
-		UNDEFINED_ERROR(-1, "Undefined."),
-		FOREACH_UNIMPLEMENTED(-2, "The foreach block is yet to be implemented."),
-		MUST_BE_RANGE(-10, "The identifier on the \"for\" statement must be a range.");
-		
-		private static Map<Integer, ReturnCode> map = new HashMap<Integer, ReturnCode>();
+	    BLOCK_RETURNED(1, "The block finished with a return statement. For internal use only."),
+	    UNDEFINED_ERROR(-1, "Undefined."),
+	    FOREACH_UNIMPLEMENTED(-2, "The foreach block is yet to be implemented."),
+	    MUST_BE_RANGE(-10, "The identifier on the \"for\" statement must be a range.");
+	    
+	    private static Map<Integer, ReturnCode> map = new HashMap<Integer, ReturnCode>();
 
 	    static {
 	        for (ReturnCode retEnum : ReturnCode.values()) {
