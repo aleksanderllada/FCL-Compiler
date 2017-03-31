@@ -88,30 +88,30 @@ class FCLVisitorImpl implements FCLVisitor<Integer> {
 	    private static Map<Integer, ReturnCode> map = new HashMap<Integer, ReturnCode>();
 
 	    static {
-	        for (ReturnCode retEnum : ReturnCode.values()) {
-	            map.put(retEnum.code, retEnum);
-	        }
+		for (ReturnCode retEnum : ReturnCode.values()) {
+		    map.put(retEnum.code, retEnum);
+		}
 	    }
 	    
 	    public static ReturnCode valueOf(int code) {
-	        return map.get(code);
+		return map.get(code);
 	    }
-		
-		private Integer code;
-		private String message;
-		
-		private ReturnCode(Integer code, String message) {
-			this.code = code;
-			this.message = message;
-		}
-		
-		public Integer getCode() {
-			return code;
-		}
-		
-		public String getMessage() {
-			return message;
-		}
+	    
+	    private Integer code;
+            private String message;
+            
+            private ReturnCode(Integer code, String message) {
+            	this.code = code;
+            	this.message = message;
+            }
+            
+            public Integer getCode() {
+            	return code;
+            }
+            
+            public String getMessage() {
+            	return message;
+            }
 	}
 	
 	// List of instructions
