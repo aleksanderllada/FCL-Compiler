@@ -1,6 +1,5 @@
 package com.fcl.compiler.antlr4;
-
-// Generated from FCL.g4 by ANTLR 4.5.1
+// Generated from grammar/FCL.g4 by ANTLR 4.5.1
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**

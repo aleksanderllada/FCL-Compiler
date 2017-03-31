@@ -498,9 +498,12 @@ class FCLVisitorImpl implements FCLVisitor<Integer> {
 	public Integer visitRetstat(RetstatContext ctx) {
 		Log.info("Entering Retstat");
 		
-		visitExp(ctx.exp());
-		
-		instructions.add("RETURN");
+		if (ctx.exp() != null) {
+			visitExp(ctx.exp());
+			instructions.add("RETURNVAL");
+		} else {
+			instructions.add("RETURN");
+		}
 		
 		return 0;
 	}

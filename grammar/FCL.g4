@@ -29,7 +29,7 @@ procedure
     ;
     
 procedurecall
-    : 'run' Identifier '(' explist? ')' ('with' varlist)?
+    : Identifier '(' explist? ')' ('with' varlist)?
     ;
     
 objlist
@@ -117,12 +117,12 @@ stringdt
     ;
     
 positiondt
-    : '[' Identifier '~' Identifier ']'     #positiondtRangeIdentifier
-    | '[' INT '~' INT ']'                   #positiondtRangeNumber
-    | '[' Identifier ']'                    #positiondtIdentifier
-    | '[' INT ']'                           #positiondtNumber
-    | Identifier '[' Identifier ']' '[' Identifier ']' #positiondtArrayIdentifierIdentifier
-    | Identifier '[' Identifier ']' '[' numberdt ']'   #positiondtArrayIdentifierNumber
+    : (Identifier)? '[' Identifier '~' Identifier ']'     #positiondtRangeIdentifier
+    | (Identifier)? '[' INT '~' INT ']'                   #positiondtRangeNumber
+    | (Identifier)? '[' Identifier ']'                    #positiondtIdentifier
+    | (Identifier)? '[' INT ']'                           #positiondtNumber
+    | (Identifier)? '[' Identifier ']' '[' Identifier ']' #positiondtArrayIdentifierIdentifier
+    | (Identifier)? '[' Identifier ']' '[' numberdt ']'   #positiondtArrayIdentifierNumber
     ;
     
 objectdt
